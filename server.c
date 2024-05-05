@@ -66,7 +66,6 @@ int main(int argc, char *argv[]) {
         error("ERROR connecting to client 2");
     }
 
-    // Communication loop
     while (1) {
         bzero(buffer, MAX_MESSAGE_SIZE);
         n = read(newsockfd, buffer, MAX_MESSAGE_SIZE);
@@ -75,7 +74,6 @@ int main(int argc, char *argv[]) {
         }
         printf("Client 1: %s", buffer);
 
-        // Forward the message to client 2
         n = write(sockfd2, buffer, strlen(buffer));
         if (n < 0) {
             error("ERROR writing to socket");
