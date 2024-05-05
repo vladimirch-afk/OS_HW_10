@@ -46,7 +46,6 @@ int main(int argc, char *argv[]) {
         error("ERROR on accept");
     }
 
-    // Connecting to client 2
     int sockfd2;
     struct sockaddr_in serv_addr2;
 
